@@ -1,117 +1,601 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devadathan B | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Devadathan B — UI/UX Designer based in Kerala, India. Designing for real problems." />
+  <title>Devadathan B — UI/UX Designer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
 </head>
-<body data-theme="light">
+<body>
 
-    <nav>
-        <div class="logo">D</div>
-        <div class="nav-links">
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
-            <div class="pull-cord-wrap" id="theme-pull">
-                <div class="cord"></div>
-            </div>
-            <a href="mailto:hello@devadathan.com" class="magnetic-btn" style="padding: 12px 24px;">Let's Talk</a>
+  <!-- ── Custom Cursor ──────────────────────────────────────── -->
+  <div id="cursor"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- ── Floating Theme Toggle (Wall Switch Style) ─────────── -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+    <div class="cord-bulb" id="cordBulb"></div>
+    <div class="cord-line"></div>
+    <div class="cord-pull" id="cordPull"></div>
+    <span class="theme-tooltip">Toggle Theme</span>
+  </button>
+
+  <!-- ══════════════════════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════════════════════ -->
+  <nav id="nav">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="#" class="nav-logo">D<span>.</span></a>
+
+      <!-- Links -->
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#how-i-work">Process</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Right -->
+      <div class="nav-right">
+        <div class="nav-status">
+          <span class="status-dot"></span>
+          Available for Work
         </div>
-    </nav>
+        <a href="#contact" class="btn-connect">Let's Talk ↗</a>
+      </div>
 
-    <main class="container">
-        <!-- HERO -->
-        <section class="hero">
-            <h1 class="reveal">I work on problems<br>worth solving.</h1>
-            <p class="positioning reveal">I simplify complex systems for real people. The messy, overlooked, actually-matters kind.</p>
-            <div class="cta-container reveal">
-                <div id="nudge">↘ start here</div>
-                <a href="#work" class="magnetic-btn">View Case Studies</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section id="hero" style="padding-top:0; min-height:100vh; display:flex; flex-direction:column; justify-content:center; max-width:1200px; margin: 0 auto; position:relative;">
+
+    <p class="label hero-eyebrow reveal">Product Thinker · UI/UX Designer</p>
+
+    <h1 class="hero-headline reveal reveal-delay-1">
+      Designing <em>digital</em> products people actually <em>need.</em>
+    </h1>
+
+    <p class="hero-sub reveal reveal-delay-2">
+      I work on problems worth solving — the messy, overlooked, actually-matters kind.
+    </p>
+
+    <p class="hero-location reveal reveal-delay-2">
+      Currently based in Kerala, India · Open to remote and relocation
+    </p>
+
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="#work" class="btn-primary" id="heroCtaBtn">
+        View My Work
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="sonar-ring ring-1"></span>
+        <span class="sonar-ring ring-2"></span>
+        <span class="sonar-ring ring-3"></span>
+      </a>
+      <a href="#about" class="btn-ghost">About Me ↗</a>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MARQUEE
+  ══════════════════════════════════════════════════════════ -->
+  <div class="container marquee-label-container">
+    <p class="label" style="color:var(--text-muted); margin-bottom:12px;">I design at the intersection of</p>
+  </div>
+  
+  <div class="marquee-wrap">
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <span class="marquee-item">Product Thinking <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Human Behaviour <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Real Problems <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Systems <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Accessibility <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Simplicity <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Details <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Curiosity <span class="marquee-dot"></span></span>
+        <!-- duplicate for seamless loop -->
+        <span class="marquee-item">Product Thinking <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Human Behaviour <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Real Problems <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Systems <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Accessibility <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Simplicity <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Details <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Curiosity <span class="marquee-dot"></span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       WORK
+  ══════════════════════════════════════════════════════════ -->
+  <section id="work">
+    <div class="container">
+
+      <div class="work-header">
+        <div>
+          <p class="label section-label reveal">Selected Work</p>
+          <h2 class="section-title reveal reveal-delay-1">Problems I've<br><em>solved.</em></h2>
+        </div>
+        <a href="#" class="work-header-link reveal reveal-delay-2">All Projects ↗</a>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- ── Project 1: PillPal ───────────────────── -->
+        <div class="project-row reveal">
+          <div class="project-meta">
+            <p class="project-num">01 — Healthcare · Accessibility</p>
+            <h3 class="project-title">PillPal</h3>
+            <p class="project-desc">Elderly people with cognitive impairments were missing doses, overdosing, and losing independence. We designed a smart medication dispenser — physical device and companion app — so they wouldn't have to rely on anyone to remember.</p>
+            <div class="project-tags">
+              <span class="tag">UX Research</span>
+              <span class="tag">Product Design</span>
+              <span class="tag">Physical + Digital</span>
+              <span class="tag">Accessibility</span>
             </div>
-        </section>
-
-        <!-- WORK -->
-        <section id="work">
-            <div class="work-grid">
-                <!-- Project 01 -->
-                <div class="project-card reveal">
-                    <div class="project-img">
-                        <img src="assets/images/pillpal.webp" alt="PillPal">
-                    </div>
-                    <div class="project-info">
-                        <p class="serif" style="color: var(--accent); margin-bottom: 10px;">01 / HEALTHCARE</p>
-                        <h2 style="font-size: 3.5rem; margin-bottom: 20px;">PillPal</h2>
-                        <p style="color: var(--muted); margin-bottom: 30px;">Smart medication dispenser for elderly users with cognitive impairments. A physical-digital accessibility study.</p>
-                        <a href="#" style="border-bottom: 1px solid var(--fg);">View Project</a>
-                    </div>
-                </div>
-
-                <!-- Project 02 -->
-                <div class="project-card rev reveal">
-                    <div class="project-img">
-                        <img src="assets/images/medigo.webp" alt="Medi-Go">
-                    </div>
-                    <div class="project-info">
-                        <p class="serif" style="color: var(--accent); margin-bottom: 10px;">02 / LOGISTICS</p>
-                        <h2 style="font-size: 3.5rem; margin-bottom: 20px;">Medi-Go</h2>
-                        <p style="color: var(--muted); margin-bottom: 30px;">Reimagining hospital appointment booking systems to reduce administrative burden and patient friction.</p>
-                        <a href="#" style="border-bottom: 1px solid var(--fg);">View Project</a>
-                    </div>
-                </div>
-
-                <!-- Project 03 -->
-                <div class="project-card reveal">
-                    <div class="project-img">
-                        <img src="assets/images/agrisense.webp" alt="Agrisense">
-                    </div>
-                    <div class="project-info">
-                        <p class="serif" style="color: var(--accent); margin-bottom: 10px;">03 / AGRI-TECH</p>
-                        <h2 style="font-size: 3.5rem; margin-bottom: 20px;">Agrisense</h2>
-                        <p style="color: var(--muted); margin-bottom: 30px;">Rapid concept development for soil health monitoring. Turning complex data into farmer-first actions.</p>
-                        <a href="#" style="border-bottom: 1px solid var(--fg);">View Project</a>
-                    </div>
-                </div>
+            <a href="case-studies/pillpal.html" class="project-cta">View Case Study ↗</a>
+          </div>
+          <div class="project-visual">
+            <div class="visual-placeholder">
+              <span class="vp-label">PillPal</span>
             </div>
-        </section>
+          </div>
+        </div>
 
-        <!-- THINKING -->
-        <section class="think-strip">
-            <div class="think-item reveal">“The best designs haven't changed in decades. A ballpen. A safety pin. Invisible because they're exactly right.”</div>
-            <div class="think-item reveal">“Most designers say they design for users. Then they spend three hours choosing a font. I've done it too.”</div>
-            <div class="think-item reveal">“I look for problems nobody's thought to solve yet. The obvious ones are already crowded.”</div>
-        </section>
-
-        <!-- ABOUT -->
-        <section id="about" class="about-grid">
-            <div class="about-left">
-                <div class="about-photo">
-                    <!-- <img src="assets/images/devadathan.webp" alt="Devadathan B"> -->
-                </div>
+        <!-- ── Project 2: Medi-Go ───────────────────── -->
+        <div class="project-row alt reveal">
+          <div class="project-meta">
+            <p class="project-num">02 — Healthcare · Mobile</p>
+            <h3 class="project-title">Medi-Go</h3>
+            <p class="project-desc">Hospital appointment booking was so broken that patients gave up and walked in instead — making the problem worse for everyone. We redesigned the entire booking flow, from finding a doctor to the waiting room token.</p>
+            <div class="project-tags">
+              <span class="tag">Mobile Design</span>
+              <span class="tag">User Research</span>
+              <span class="tag">End-to-End Flow</span>
             </div>
-            <div class="about-right reveal">
-                <p>I’m Devadathan B, a Product Designer based in Kerala. I like turning complex shit into simple shit.</p>
-                <p>I’m not "artistic" in the traditional sense. I chose design because I like solving puzzles using my brain instead of memorizing 50,000 rules.</p>
-                <p>If you’re looking for a designer who prioritizes clarity over decoration, we should talk.</p>
-                <div style="margin-top: 60px;">
-                    <a href="resume.pdf" class="serif" style="font-size: 1.5rem; color: var(--accent);">Download Resume ↗</a>
-                </div>
+            <a href="case-studies/medigo.html" class="project-cta">View Case Study ↗</a>
+          </div>
+          <div class="project-visual">
+            <div class="visual-placeholder">
+              <span class="vp-label">Medi-Go</span>
             </div>
-        </section>
+          </div>
+        </div>
 
-        <footer>
-            <div class="footer-cta serif">Have a problem worth solving?<br>Let's build it.</div>
-            <div class="footer-links">
-                <a href="mailto:hello@devadathan.com">hello@devadathan.com</a>
-                <div style="display: flex; gap: 20px;">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Bento</a>
-                </div>
+        <!-- ── Project 3: Agrisense ─────────────────── -->
+        <div class="project-row reveal">
+          <div class="project-meta">
+            <p class="project-num">03 — AgriTech · IoT</p>
+            <h3 class="project-title">Agrisense</h3>
+            <p class="project-desc">Farmers were sending soil samples to labs and waiting weeks for results — by which point the crop damage was done. We designed a solar-powered in-field sensor paired with a mobile app that gives real-time soil health data without a lab.</p>
+            <div class="project-tags">
+              <span class="tag">IoT Design</span>
+              <span class="tag">Physical Device</span>
+              <span class="tag">Mobile App</span>
+              <span class="tag">AgriTech</span>
             </div>
-        </footer>
-    </main>
+            <a href="case-studies/agrisense.html" class="project-cta">View Case Study ↗</a>
+          </div>
+          <div class="project-visual">
+            <div class="visual-placeholder">
+              <span class="vp-label">Agrisense</span>
+            </div>
+          </div>
+        </div>
 
-    <script src="script.js"></script>
+      </div>
+
+      <!-- Small work row -->
+      <div class="work-small-row reveal">
+        <div class="work-small-card">
+          <div class="work-small-visual">MR</div>
+          <div class="work-small-meta">
+            <p class="work-small-label">Brand Identity</p>
+            <p class="work-small-title">Muscle Repair</p>
+            <p class="work-small-sub">Brand redesign — logo, colour system, typography</p>
+          </div>
+        </div>
+        <div class="work-small-card">
+          <div class="work-small-visual">ST</div>
+          <div class="work-small-meta">
+            <p class="work-small-label">Web Design · 2024</p>
+            <p class="work-small-title">STC Networks</p>
+            <p class="work-small-sub">Landing pages and websites for beauty clinic clients</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HOW I THINK
+  ══════════════════════════════════════════════════════════ -->
+  <section id="how-i-think" style="padding: 120px 0;">
+    <div class="container">
+      <div class="think-list">
+
+        <div class="think-item reveal">
+          <span class="think-num">01</span>
+          <p class="think-text">
+            The best designs haven't changed in decades. A ballpen. A safety pin.
+            <em>Invisible because they're exactly right.</em>
+          </p>
+        </div>
+
+        <div class="think-item reveal reveal-delay-1">
+          <span class="think-num">02</span>
+          <p class="think-text">
+            Most designers say they design for users. Then they spend three hours choosing a font.
+            <em>I've done it too.</em>
+          </p>
+        </div>
+
+        <div class="think-item reveal reveal-delay-2">
+          <span class="think-num">03</span>
+          <p class="think-text">
+            I look for problems nobody's thought to solve yet.
+            <em>The obvious ones are already crowded.</em>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HOW I WORK
+  ══════════════════════════════════════════════════════════ -->
+  <section id="how-i-work">
+    <div class="container">
+
+      <div class="work-approach-top reveal">
+        <div>
+          <p class="label section-label">Process</p>
+          <h2 class="section-title">Logic meets<br><em>emotion.</em></h2>
+        </div>
+        <p class="work-approach-intro">
+          I don't design pretty screens. I design decisions — ones grounded in research, shaped by systems thinking, and built for the human on the other side.
+        </p>
+      </div>
+
+      <!-- EDIPT -->
+      <div class="process-row reveal reveal-delay-1">
+        <div class="process-col">
+          <span class="process-col-num">01</span>
+          <span class="process-col-name">Empathize</span>
+          <p class="process-col-desc">Interviews, observations, secondary research. I spend disproportionate time here. Most teams don't.</p>
+        </div>
+        <div class="process-divider"></div>
+        <div class="process-col">
+          <span class="process-col-num">02</span>
+          <span class="process-col-name">Define</span>
+          <p class="process-col-desc">A problem statement specific enough to design for, open enough to explore. The hardest step to get right.</p>
+        </div>
+        <div class="process-divider"></div>
+        <div class="process-col">
+          <span class="process-col-num">03</span>
+          <span class="process-col-name">Ideate</span>
+          <p class="process-col-desc">Broadly first, then pruned ruthlessly. I prefer 50 bad ideas over 3 polished ones that went untested.</p>
+        </div>
+        <div class="process-divider"></div>
+        <div class="process-col">
+          <span class="process-col-num">04</span>
+          <span class="process-col-name">Prototype</span>
+          <p class="process-col-desc">Low-fi first, always. Speed of learning matters more than fidelity at this stage.</p>
+        </div>
+        <div class="process-divider"></div>
+        <div class="process-col">
+          <span class="process-col-num">05</span>
+          <span class="process-col-name">Test</span>
+          <p class="process-col-desc">Real work in front of real people. Every assumption is a hypothesis until proven otherwise.</p>
+        </div>
+      </div>
+
+      <!-- Capabilities -->
+      <div class="cap-list reveal reveal-delay-2">
+        <div class="cap-item">
+          <span class="cap-item-name">Notice</span>
+          <span class="cap-item-rule"></span>
+          <span class="cap-item-desc">Finding the real problem before anyone else has framed it. The issue is rarely where it first appears.</span>
+        </div>
+        <div class="cap-item">
+          <span class="cap-item-name">Simplify</span>
+          <span class="cap-item-rule"></span>
+          <span class="cap-item-desc">Reducing complexity without losing depth. The best UX is invisible — it never makes users feel like they're working.</span>
+        </div>
+        <div class="cap-item">
+          <span class="cap-item-name">Shape</span>
+          <span class="cap-item-rule"></span>
+          <span class="cap-item-desc">Translating insight into screens, flows, and systems that hold together under real-world pressure.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════════════════════ -->
+  <section id="testimonials">
+    <div class="container">
+      <p class="label section-label reveal">Kind Words</p>
+      <h2 class="section-title reveal reveal-delay-1">What people<br><em>say.</em></h2>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal reveal-delay-1 testimonial-placeholder">
+          <p class="testimonial-quote">Testimonial coming soon — reaching out to internship colleagues and faculty.</p>
+          <div class="testimonial-person">
+            <span class="testimonial-name">— Name, Title</span>
+            <span class="testimonial-role">Company · Relationship</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2 testimonial-placeholder">
+          <p class="testimonial-quote">Testimonial coming soon — reaching out to internship colleagues and faculty.</p>
+          <div class="testimonial-person">
+            <span class="testimonial-name">— Name, Title</span>
+            <span class="testimonial-role">Company · Relationship</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       TOOLS
+  ══════════════════════════════════════════════════════════ -->
+  <section id="tools">
+    <div class="container">
+      <p class="label section-label reveal">Tools of the Trade</p>
+      <h2 class="section-title reveal reveal-delay-1">What I<br><em>work with.</em></h2>
+
+      <div class="tools-grid">
+
+        <!-- Figma -->
+        <div class="tool-card" data-fill="85">
+          <div class="tool-icon">
+            <svg width="28" height="42" viewBox="0 0 38 57" fill="none">
+              <path d="M19 28.5C19 25.98 20 23.56 21.78 21.78C23.56 20 25.98 19 28.5 19C31.02 19 33.44 20 35.22 21.78C37 23.56 38 25.98 38 28.5C38 31.02 37 33.44 35.22 35.22C33.44 37 31.02 38 28.5 38C25.98 38 23.56 37 21.78 35.22C20 33.44 19 31.02 19 28.5Z" fill="#1ABCFE"/>
+              <path d="M0 47.5C0 44.98 1 42.56 2.78 40.78C4.56 39 6.98 38 9.5 38H19V47.5C19 50.02 18 52.44 16.22 54.22C14.44 56 12.02 57 9.5 57C6.98 57 4.56 56 2.78 54.22C1 52.44 0 50.02 0 47.5Z" fill="#0ACF83"/>
+              <path d="M19 0V19H28.5C31.02 19 33.44 18 35.22 16.22C37 14.44 38 12.02 38 9.5C38 6.98 37 4.56 35.22 2.78C33.44 1 31.02 0 28.5 0H19Z" fill="#FF7262"/>
+              <path d="M0 9.5C0 12.02 1 14.44 2.78 16.22C4.56 18 6.98 19 9.5 19H19V0H9.5C6.98 0 4.56 1 2.78 2.78C1 4.56 0 6.98 0 9.5Z" fill="#F24E1E"/>
+              <path d="M0 28.5C0 31.02 1 33.44 2.78 35.22C4.56 37 6.98 38 9.5 38H19V19H9.5C6.98 19 4.56 20 2.78 21.78C1 23.56 0 25.98 0 28.5Z" fill="#A259FF"/>
+            </svg>
+          </div>
+          <p class="tool-name">Figma</p>
+          <p class="tool-role">Design & Prototyping</p>
+          <p class="tool-desc">Primary tool for everything — wireframes, high-fidelity designs, prototypes, and design systems.</p>
+          <div class="tool-bar-wrap">
+            <p class="tool-bar-label">Proficiency</p>
+            <div class="tool-bar"><div class="tool-bar-fill" style="--fill:85%"></div></div>
+          </div>
+          <div class="tool-anim"></div>
+        </div>
+
+        <!-- FigJam -->
+        <div class="tool-card" data-fill="80">
+          <div class="tool-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="6" fill="#FFC700"/>
+              <path d="M10 16C10 13.79 11.79 12 14 12H18C20.21 12 22 13.79 22 16C22 18.21 20.21 20 18 20H14C11.79 20 10 18.21 10 16Z" fill="#1A1A1A"/>
+              <circle cx="16" cy="10" r="2" fill="#1A1A1A"/>
+            </svg>
+          </div>
+          <p class="tool-name">FigJam</p>
+          <p class="tool-role">Thinking & Mapping</p>
+          <p class="tool-desc">For the messy middle — user journeys, affinity diagrams, brainstorms, and problem framing.</p>
+          <div class="tool-bar-wrap">
+            <p class="tool-bar-label">Proficiency</p>
+            <div class="tool-bar"><div class="tool-bar-fill" style="--fill:80%"></div></div>
+          </div>
+          <div class="tool-anim"></div>
+        </div>
+
+        <!-- Framer -->
+        <div class="tool-card" data-fill="55">
+          <div class="tool-icon">
+            <svg width="22" height="32" viewBox="0 0 28 42" fill="none">
+              <path d="M0 0H28V14H14L28 28H14V42L0 28V14H14L0 0Z" fill="white"/>
+            </svg>
+          </div>
+          <p class="tool-name">Framer</p>
+          <p class="tool-role">No-code Builds</p>
+          <p class="tool-desc">For bringing prototypes to life with real interactions beyond what Figma can show.</p>
+          <div class="tool-bar-wrap">
+            <p class="tool-bar-label">Proficiency</p>
+            <div class="tool-bar"><div class="tool-bar-fill" style="--fill:55%"></div></div>
+          </div>
+          <div class="tool-anim"></div>
+        </div>
+
+        <!-- VS Code -->
+        <div class="tool-card" data-fill="60">
+          <div class="tool-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <path d="M29 3.22L22.25 0.2C21.59-0.09 20.83 0.05 20.32 0.55L0.55 18.84C0.07 19.29-0.1 19.97 0.09 20.61L22.25 0.55C20.83 0.05 21.59-0.09 22.25 0.2L29 3.22Z" fill="rgba(255,255,255,0.25)"/>
+              <path d="M23.5 0L29 2.79C29.65 3.09 30 3.71 30 4.39V27.61C30 28.29 29.65 28.91 29 29.21L23.5 32V24L0.56 20.06C-0.04 19.96-0.3 19.26 0.14 18.84L20.32 0.14C20.83-0.36 21.59-0.51 22.25-0.21L23.5 0ZM22.34 23.14L23.5 23.33V8.67L22.34 8.86L8.87 16L22.34 23.14Z" fill="white"/>
+            </svg>
+          </div>
+          <p class="tool-name">VS Code</p>
+          <p class="tool-role">Code Editor</p>
+          <p class="tool-desc">For when design needs to become real. Built this entire portfolio in VS Code — HTML, CSS, and JS.</p>
+          <div class="tool-bar-wrap">
+            <p class="tool-bar-label">Proficiency</p>
+            <div class="tool-bar"><div class="tool-bar-fill" style="--fill:60%"></div></div>
+          </div>
+          <div class="tool-anim"></div>
+        </div>
+
+        <!-- Claude / AI -->
+        <div class="tool-card" data-fill="90">
+          <div class="tool-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="13" stroke="white" stroke-width="1.5"/>
+              <path d="M10 16C10 12.69 12.69 10 16 10C19.31 10 22 12.69 22 16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M13 21C13 19.34 14.34 18 16 18C17.66 18 19 19.34 19 21" stroke="#D44D2E" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="16" cy="16" r="2" fill="#D44D2E"/>
+            </svg>
+          </div>
+          <p class="tool-name">Claude / ChatGPT</p>
+          <p class="tool-role">AI Research Partner</p>
+          <p class="tool-desc">For accelerating research synthesis and stress-testing ideas. AI as a thinking partner, not a shortcut.</p>
+          <div class="tool-bar-wrap">
+            <p class="tool-bar-label">Proficiency</p>
+            <div class="tool-bar"><div class="tool-bar-fill" style="--fill:90%"></div></div>
+          </div>
+          <div class="tool-anim"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="about-sticky-wrap">
+
+      <!-- Sticky photo -->
+      <div class="about-sticky-left">
+        <div class="about-photo">
+          <div class="about-photo-placeholder">
+            <svg class="photo-placeholder-icon" width="56" height="56" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="24" r="12" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 56C8 43.85 19.16 34 32 34C44.84 34 56 43.85 56 56" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span class="photo-placeholder-text">Your photo here</span>
+          </div>
+        </div>
+        <div class="about-photo-caption">
+          <span class="photo-name">Devadathan B</span>
+          <span class="photo-loc">Kerala, India</span>
+        </div>
+      </div>
+
+      <!-- Scrollable content -->
+      <div class="about-scroll-right">
+        <p class="label" style="color:var(--text-muted); margin-bottom:48px; letter-spacing:2.5px;">About</p>
+
+        <h2 class="about-big-line reveal">
+          I lead with<br><em>questions.</em>
+        </h2>
+
+        <div class="about-prose reveal reveal-delay-1">
+          <p>Based in Kerala. Four years studying design. Six months working on real briefs for real clients. The gap between those two things is where I actually learned to design.</p>
+        </div>
+
+        <div class="about-prose reveal reveal-delay-2">
+          <p>My instinct is always to go deeper than the brief — to ask why the problem exists before I attempt to solve it. I'm drawn to overlooked systems. The ones everyone uses and nobody's thought to redesign.</p>
+        </div>
+
+        <div class="about-prose reveal reveal-delay-3">
+          <p>I'm not naturally artistic. I chose design because of the thinking, not the drawing. I learn fast when I'm doing, slow when I'm reading. I'll give everything I have to a company that gives me real problems to work on.</p>
+        </div>
+
+        <div class="about-facts reveal reveal-delay-4">
+          <div class="about-fact">
+            <span class="fact-num">4</span>
+            <span class="fact-label">Years studying design</span>
+          </div>
+          <div class="about-fact">
+            <span class="fact-num">6<span style="font-size:0.45em; font-weight:400; vertical-align:middle; font-family:var(--sans);">mo</span></span>
+            <span class="fact-label">Real client work</span>
+          </div>
+          <div class="about-fact">
+            <span class="fact-num">3</span>
+            <span class="fact-label">Case studies</span>
+          </div>
+        </div>
+
+        <div class="about-cta-row reveal">
+          <a href="#contact" class="btn-primary">Get in Touch ↗</a>
+          <a href="assets/resume.pdf" class="btn-ghost" target="_blank">Resume ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       CONTACT + FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+
+      <p class="label contact-eyebrow reveal">Get In Touch</p>
+
+      <h2 class="contact-headline reveal reveal-delay-1">
+        Let's build<br>
+        something<br>
+        <em>worth using.</em>
+      </h2>
+
+      <div class="contact-grid reveal reveal-delay-2">
+        <div>
+          <p class="contact-desc">
+            Open to <strong>full-time product design roles</strong> at established product companies. Also happy to talk about design, systems, or anything you think I'd find interesting.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:hello@devadathan.in" class="contact-link-item">
+            <div>
+              <p class="contact-link-label">Email</p>
+              <p class="contact-link-val">hello@devadathan.in</p>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+          <a href="https://linkedin.com/in/devadathanb" target="_blank" class="contact-link-item">
+            <div>
+              <p class="contact-link-label">LinkedIn</p>
+              <p class="contact-link-val">linkedin.com/in/devadathanb</p>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+          <a href="https://dribbble.com/devadathan" target="_blank" class="contact-link-item">
+            <div>
+              <p class="contact-link-label">Dribbble</p>
+              <p class="contact-link-val">dribbble.com/devadathan</p>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+          <a href="https://read.cv/devadathan" target="_blank" class="contact-link-item">
+            <div>
+              <p class="contact-link-label">Read.cv</p>
+              <p class="contact-link-val">read.cv/devadathan</p>
+            </div>
+            <span class="contact-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <div class="footer-logo">D<span>.</span></div>
+        <p class="footer-closing">Designed and built by hand in Kerala.</p>
+        <p class="footer-copy">© 2025 Devadathan B</p>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
